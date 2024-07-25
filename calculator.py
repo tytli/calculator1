@@ -1,23 +1,29 @@
 import customtkinter
 import customtkinter as ctk
 import numpy as np
+import scipy as sp
+import scipy.special
 
 z=0
 app = ctk.CTk( )
 app.title("New calculator 6.0 beta test")
 app.iconbitmap('$RGWODJ2.ico')
 ctk.set_appearance_mode('dark')
-e=ctk.CTkFrame(master=app,corner_radius=1000)
+
+m=float
 def q1():
     p1=int(v.get())
 v= ctk.CTkEntry(master=app,width=450,height=2)
 v1=ctk.CTkLabel(master=app,width=450,text_color="green",text="сдесь будет выводится ровное",font=(app,20))
-var=int()
+value1=v.get()
 
 
-
+def des2():
+    m=int
+def des3():
+    m=float
 def w12():
-    app1=complex(v.get())
+    app1=m(v.get())
     app2=np.log(app1)
     v1.configure(text=app2)
 
@@ -145,27 +151,233 @@ def w32():
     w52 = np.arcsinh(w51)
     v1.configure(text=w52)
 def des():
-    w53=complex(v.get())
-    w54=2*w53*np.pi()
-    v1.configure(text=w54)
-def q2():
-    c1=ctk.CTkToplevel()
-    c=ctk.CTkButton(master=c1,text="S=2pR",command=des)
 
+    w53=m(v.get())
+    w54=np.floor(w53)
+    v1.configure(text=w54)
+def vbb():
+    w53 = m(v.get())
+    w54 = np.degrees(w53)
+    v1.configure(text=w54)
+def vbb1():
+    w53 = m(v.get())
+    w34=np.array([w53])
+    w54 = np.cbrt(w34)
+    v1.configure(text=w54)
+def vbb2():
+    w34 = m(v.get())
+    w54 = np.expm1(w34)
+    v1.configure(text=w54)
+def vbb3():
+    w34 = m(v.get())
+    w35=np.array(w34)
+    w54 = np.hypot(w35,w35)
+    v1.configure(text=w54)
+def vbb5():
+    w34 = m(v.get())
+    w35 = np.array(w34)
+    w54 = np.angle(w35, w35)
+    v1.configure(text=w54)
+def vbb6():
+    w34 = m(v.get())
+    w35 = np.array(w34)
+    w54 = np.unwrap([w35, w35,w35,w35,w35],period=4)
+    v1.configure(text=w54)
+def vbb7():
+    w34 = m(v.get())
+    w35 = np.array(w34)
+    w54 = np.gradient(w35)
+    v1.configure(text=w54)
+def vbb8():
+    w34 = m(v.get())
+    w35 = np.array(w34)
+    w54 = np.convolve(w35,w35)
+    v1.configure(text=w54)
+def vbb9():
+    w34 = m(v.get())
+    w35 = np.array(w34)
+    w54 = np.conj(w35)
+    v1.configure(text=w54)
+def vbb10():
+    w35 = m(v.get())
+    w54 = np.round(w35)
+    v1.configure(text=w54)
+def q1v():
+    w35 = m(v.get())
+    c=np.array([w35,w35])
+    w55=np.cumsum(c)
+    v1.configure(text=w55)
+def q2v():
+    w35 = m(v.get())
+    c = np.array([w35])
+    w55 = np.matmul(c,c)
+    v1.configure(text=w55)
+def q3v():
+    w35 = m(v.get())
+    xc=np.random.default_rng()
+    w55 = xc.f(w35,w35)
+    v1.configure(text=w55)
+def q4v():
+    v.insert(0,np.e)
+def q5v():
+    w35 = m(v.get())
+    w55 = np.euler_gamma
+    v1.insert(0,w55)
+def q6v():
+    w35 = m(v.get())
+    w45=np.array(w35)
+    w55 = np.sum(w45)
+    v1.configure(text=w55)
+def q7v():
+    w35=m(v.get())
+    w36=sp.special.airy(w35)
+    v1.configure(text=w36)
+def q8v():
+    w35 = m(v.get())
+    w36 = sp.special.j0(w35)
+    v1.configure(text=w36)
+def q9v():
+    w35 = m(v.get())
+    w36 = sp.special.j1(w35)
+    v1.configure(text=w36)
+def q10v():
+    w35 = m(v.get())
+    w36 = sp.special.i0(w35)
+    v1.configure(text=w36)
+def q11v():
+    w35 = m(v.get())
+    w36 = sp.special.i1(w35)
+    v1.configure(text=w36)
+def q12v():
+    w35 = m(v.get())
+    w36 = sp.special.ellipj(w35,w35)
+    v1.configure(text=w36)
+def q13v():
+    w35 = m(v.get())
+    w36 = sp.special.ellipk(w35)
+    v1.configure(text=w36)
+def q14v():
+    w35 = m(v.get())
+    w36 = sp.special.ellipkm1(w35)
+    v1.configure(text=w36)
+def q15v():
+    w35 = m(v.get())
+    w36 = sp.special.ellipe(w35)
+    v1.configure(text=w36)
+def q16v():
+    w35 = m(v.get())
+    w36 = sp.special.ellipeinc(w35)
+    v1.configure(text=w36)
+def q17v():
+    w35 = m(v.get())
+    w36 = sp.special.betainc(w35,w35,w35)
+    v1.configure(text=w36)
+def q18v():
+    w35 = m(v.get())
+    w36 = sp.special.fdtr(w35, w35, w35)
+    v1.configure(text=w36)
+def q19v():
+    w35 = m(v.get())
+    w36 = sp.special.gdtr(w35, w35, w35)
+    v1.configure(text=w36)
+def q20v():
+    w35 = m(v.get())
+    w36 = sp.special.elliprj(w35, w35, w35,w35)
+    v1.configure(text=w36)
+def q21v():
+    w35 = m(v.get())
+    w36 = sp.special.beta(w35)
+    v1.configure(text=w36)
+def q222():
+    c1=ctk.CTkToplevel(app)
+    c1.title("DllS")
+    c1.iconbitmap('$RGWODJ2.ico')
+    c=ctk.CTkButton(master=c1,text="floor",command=des)
+    c11 = ctk.CTkButton(master=c1, text="radians to corners", command=vbb)
+    c12 = ctk.CTkButton(master=c1, text="cbrt", command=vbb1)
+    c13=ctk.CTkButton(master=c1, text="exp(a)-1", command=vbb2)
+    c14 = ctk.CTkButton(master=c1, text="hypot", command=vbb3)
+    c15 = ctk.CTkButton(master=c1, text="angle", command=vbb5)
+    c16 = ctk.CTkButton(master=c1, text="unwrap", command=vbb6)
+    c17 = ctk.CTkButton(master=c1, text="gradient", command=vbb7)
+    c18=ctk.CTkButton(master=c1, text="convolve", command=vbb8)
+    c19 = ctk.CTkButton(master=c1, text="conj", command=vbb9)
+    c20=ctk.CTkButton(master=c1,text="round",command=vbb10)
+    c21=ctk.CTkButton(master=c1,text="Возвращает накопленную сумму",command=q1v)
+    c22=ctk.CTkButton(master=c1,text="Матричное произведение двух массивов",command=q2v)
+    c23 = ctk.CTkButton(master=c1, text="функция f", command=q3v)
+    c24 = ctk.CTkButton(master=c1, text="e", command=q4v)
+    c25=ctk.CTkButton(master=c1,text="euler_gammma",command=q5v)
+    bc25 = ctk.CTkButton(master=c1, text="суммирования моссивов", command=q6v)
+    bc26 = ctk.CTkButton(master=c1, text="integer", command=des2)
+    bc27 = ctk.CTkButton(master=c1, text="float", command=des3)
     e2=ctk.CTkLabel(master=c1,text="Function 12")
     e3 = ctk.CTkLabel(master=c1, text="func")
+
+    nb=ctk.CTkToplevel()
+    nb.title("DLLS")
+
+    bc26 = ctk.CTkButton(master=nb, text="Функции Эйри", command=q7v)
+    bc27=ctk.CTkButton(master=nb,text="Функция Бесселя первого рода порядка 0",command=q8v)
+    bc28 = ctk.CTkButton(master=nb, text="Функция Бесселя первого рода порядка 1", command=q9v)
+    bc29 = ctk.CTkButton(master=nb, text=" i0", command=q10v)
+    bc30 = ctk.CTkButton(master=nb, text=" i1", command=q11v)
+    bc31=ctk.CTkButton(master=nb,text="Якоби",command=q12v)
+    bc32=ctk.CTkButton(master=nb,text="Complete elliptic integral of the first kind",command=q13v)
+    bc33 = ctk.CTkButton(master=nb, text="Complete elliptic integral of the first kind around m=1", command=q14v)
+    bc34=ctk.CTkButton(master=nb, text="Complete elliptic integral of the second kind", command=q15v)
+    bc35=ctk.CTkButton(master=nb, text="Incomplete elliptic integral of the second kind", command=q16v)
+    bc36 = ctk.CTkButton(master=nb, text="Cumulative distribution function of the beta distribution", command=q17v)
+    bc37=ctk.CTkButton(master=nb, text="F cumulative distribution function", command=q18v)
+    bc38 = ctk.CTkButton(master=nb, text="Gamma distribution cumulative distribution function", command=q19v)
+    bc39 = ctk.CTkButton(master=nb, text="Symmetric elliptic integral of the third kind", command=q20v)
+    bc40 = ctk.CTkButton(master=nb, text="beta function", command=q21v)
+
+
     c.grid(row=4,column=5)
-    e.grid(row=2,column=6)
     e2.grid(row=1,column=6)
     e3.grid(row=3,column=5)
+    bc26.grid(row=5,column=10,pady=5)
+    bc27.grid(row=7,column=10,pady=5)
+    bc28.grid(row=9,column=10,pady=5)
+    bc29.grid(row=10,column=10,pady=5)
+    bc30.grid(row=12,column=10,pady=5)
+    bc31.grid(row=14, column=10, pady=5)
+    bc32.grid(row=16, column=10, pady=5)
+    bc33.grid(row=18, column=10, pady=5)
+    bc34.grid(row=20, column=10, pady=5)
+    bc35.grid(row=22, column=10, pady=5)
+    bc36.grid(row=24, column=10, pady=5)
+    bc37.grid(row=26, column=10, pady=5)
+    bc38.grid(row=28, column=10, pady=5)
+    bc39.grid(row=30, column=10, pady=5)
+    bc40.grid(row=32, column=10, pady=5)
+    c11.grid(row=5,column=5,pady=5)
+    c12.grid(row=7,column=5,pady=5)
+    c13.grid(row=9,column=5,pady=5)
+    c14.grid(row=12,column=5,pady=5)
+    c15.grid(row=14,column=5,pady=5)
+    c16.grid(row=16,column=5,pady=5)
+    c17.grid(row=18,column=5,pady=5)
+    c18.grid(row=20,column=5,pady=5)
+    c19.grid(row=22,column=5,pady=5)
+    c20.grid(row=24,column=5,pady=5)
+    c21.grid(row=26,column=5,pady=5)
+    c22.grid(row=28, column=5, pady=5)
+    c23.grid(row=30, column=5, pady=5)
+    c24.grid(row=32,column=5,pady=5)
+    c25.grid(row=34,column=5,pady=5)
+    bc25.grid(row=36,column=5,pady=5)
+
     c1.mainloop()
 def f1():
 
 
     xz=ctk.CTkToplevel()
     xz.title("Настройки calculator 6.0 alfa")
+    xz.iconbitmap('$RGWODJ2.ico')
     xz2=ctk.CTkLabel(master=xz,text="function dlls 1",text_color="lightblue",font=(app,30))
-    xz1=ctk.CTkRadioButton(master=xz,text="dlls",font=(app,30),command=q2)
+    xz1=ctk.CTkCheckBox(master=xz,text="dlls",font=(app,30),command=q222)
 
     xz2.grid(row=1,column=1)
     xz1.grid(row=3,column=1)
